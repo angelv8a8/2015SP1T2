@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @stadium.nombre %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @stadium.ciudad %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= @stadium.foto %>
+</p>
+
+<p>
+  <strong>Fecha construccion:</strong>
+  <%= @stadium.fecha_construccion %>
+</p>
+
+<p>
+  <strong>Capacidad:</strong>
+  <%= @stadium.capacidad %>
+</p>
+
+<%= link_to 'Edit', edit_stadium_path(@stadium) %> |
+<%= link_to 'Back', stadia_path %>

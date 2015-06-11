@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Matches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Informaci&oacute;n</th>
+      <th ></th>
+      <th>Equipo ganador</th>
+      <th>Equipo perdedor</th>
+      <th>Empate?</th>
+      <th>Grupo</th>
+      <th>Estadio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @matches.each do |match| %>
+      <tr style="border-bottom: dotted 2px gray;">
+        <td><%= match.matchdate %><br>
+         <%= Fase.find( match.fase ).nombre%><br>
+         <%= match.estado %></td>
+        <td><%= Team.find(match.equipo_local).nombre %>
+        <img width="30px" src="<%= Team.find(match.equipo_local).bandera %>">
+        <%= match.marcador_local %> -  <%= match.marcador_visitante %>
+        <img width="30px" src="<%= Team.find(match.equipo_visitante).bandera %>">
+        <%= Team.find(match.equipo_visitante).nombre %></td>
+        <td><%= match.equipo_ganador %></td>
+        <td><%= match.equipo_perdedor %></td>
+        <td><%= match.empate? %></td>
+        <td><%= match.grupo %></td>
+        <td><%= match.estadio %></td>
+        <td><%= link_to 'Show', match %></td>
+        <td><%= link_to 'Edit', edit_match_path(match) %></td>
+        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td >
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Match', new_match_path %>

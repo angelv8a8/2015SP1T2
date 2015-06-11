@@ -1,0 +1,1 @@
+json.extract! @match, :id, :matchdate, :fase, :estado, :equipo_local, :equipo_visitante, :marcador_local, :marcador_visitante, :equipo_ganador, :equipo_perdedor, :empate?, :grupo, :estadio, :created_at, :updated_at

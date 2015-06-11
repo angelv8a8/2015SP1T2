@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Stadia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Ciudad</th>
+      <th>Foto</th>
+      <th>Fecha construccion</th>
+      <th>Capacidad</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stadia.each do |stadium| %>
+      <tr>
+        <td><%= stadium.nombre %></td>
+        <td><%= stadium.ciudad %></td>
+        <td><img width="150px" src="<%= stadium.foto %>"</td>
+        <td><%= stadium.fecha_construccion %></td>
+        <td><%= stadium.capacidad %></td>
+        <td><%= link_to 'Show', stadium %></td>
+        <td><%= link_to 'Edit', edit_stadium_path(stadium) %></td>
+        <td><%= link_to 'Destroy', stadium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stadium', new_stadium_path %>

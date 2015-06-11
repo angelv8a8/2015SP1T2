@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matchdate: 
+  fase: 
+  estado: 
+  equipo_local: 
+  equipo_visitante: 
+  marcador_local: 
+  marcador_visitante: 
+  equipo_ganador: 
+  equipo_perdedor: 
+  empate?: 
+  grupo: 
+  estadio: 1
+
+two:
+  matchdate: 
+  fase: 
+  estado: 
+  equipo_local: 
+  equipo_visitante: 
+  marcador_local: 
+  marcador_visitante: 
+  equipo_ganador: 
+  equipo_perdedor: 
+  empate?: 
+  grupo: 
+  estadio: 1

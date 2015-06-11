@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matchdate:</strong>
+  <%= @match.matchdate %>
+</p>
+
+<p>
+  <strong>Fase:</strong>
+  <%= @match.fase %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @match.estado %>
+</p>
+
+<p>
+  <strong>Equipo local:</strong>
+  <%= @match.equipo_local %>
+</p>
+
+<p>
+  <strong>Equipo visitante:</strong>
+  <%= @match.equipo_visitante %>
+</p>
+
+<p>
+  <strong>Marcador local:</strong>
+  <%= @match.marcador_local %>
+</p>
+
+<p>
+  <strong>Marcador visitante:</strong>
+  <%= @match.marcador_visitante %>
+</p>
+
+<p>
+  <strong>Equipo ganador:</strong>
+  <%= @match.equipo_ganador %>
+</p>
+
+<p>
+  <strong>Equipo perdedor:</strong>
+  <%= @match.equipo_perdedor %>
+</p>
+
+<p>
+  <strong>Empate?:</strong>
+  <%= @match.empate? %>
+</p>
+
+<p>
+  <strong>Grupo:</strong>
+  <%= @match.grupo %>
+</p>
+
+<p>
+  <strong>Estadio:</strong>
+  <%= @match.estadio %>
+</p>
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>

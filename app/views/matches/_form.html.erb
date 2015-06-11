@@ -1,0 +1,71 @@
+<%= form_for(@match) do |f| %>
+  <% if @match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+      <% @match.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="float:left; ">
+    <div class="field">
+      <%= f.label :matchdate %><br>
+      <%= f.text_field :matchdate %>
+    </div>
+    <div class="field">
+      <%= f.label :fase %><br>
+       <%= f.select :fase, options_for_select(Fase.all.map{|s|[s.nombre, s.id]}) %>
+      
+    </div>
+      <div class="field">
+        <%= f.label :estado %><br>
+        <%= f.text_field :estado %>
+      </div>
+      <div class="field">
+        <%= f.label :equipo_local %><br>
+         <%= f.select :equipo_local, options_for_select(Team.all.map{|s|[s.nombre, s.id]}) %>
+      </div>
+      <div class="field">
+        <%= f.label :equipo_visitante %><br>
+        <%= f.select :equipo_visitante, options_for_select(Team.all.map{|s|[s.nombre, s.id]}) %>
+      </div>
+      <div class="field">
+        <%= f.label :marcador_local %><br>
+        <%= f.text_field :marcador_local %>
+      </div>
+      <div class="field">
+        <%= f.label :marcador_visitante %><br>
+        <%= f.text_field :marcador_visitante %>
+      </div>
+        </div>
+  <div style="float:left; padding-left:50px; ">
+  <div class="field">
+        <%= f.label :equipo_ganador %><br>
+        <%= f.select :equipo_ganador, options_for_select(Team.all.map{|s|[s.nombre, s.id]}) %>
+      
+      </div>
+      <div class="field">
+        <%= f.label :equipo_perdedor %><br>
+        <%= f.select :equipo_perdedor, options_for_select(Team.all.map{|s|[s.nombre, s.id]}) %>
+      </div>
+      <div class="field">
+        <%= f.label :empate? %><br>
+        <%= f.text_field :empate? %>
+      </div>
+      <div class="field">
+        <%= f.label :grupo %><br>
+        <%= f.select :grupo, options_for_select(Group.all.map{|s|[s.nombre, s.id]}) %>
+      </div>
+      <div class="field">
+        <%= f.label :estadio %><br>
+        <%= f.select :estadio, options_for_select(Stadium.all.map{|s|[s.nombre, s.id]}) %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+</div>
+<% end %>
